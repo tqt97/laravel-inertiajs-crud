@@ -1,0 +1,72 @@
+.container {
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+
+    @media screen and (max-width: 37.5rem) {
+        display: block;
+    }
+
+    .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+
+        .card {
+            width: 45%;
+            padding: 16px;
+            background-color: #d4f4d7;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            word-wrap: break-word;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Căn giữa tất cả các phần tử theo chiều ngang */
+            justify-content: flex-start; /* Các phần tử bắt đầu từ trên cùng */
+            overflow: hidden;
+        }
+        .cardImage {
+            width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng của card */
+            max-width: 150px; /* Hình ảnh có chiều rộng tối đa là 150px */
+            height: auto; /* Giữ tỷ lệ của hình ảnh */
+            margin-bottom: 10px; /* Khoảng cách giữa hình ảnh và văn bản */
+            object-fit: cover; /* Đảm bảo hình ảnh không bị méo khi thay đổi kích thước */
+        }
+
+        .card p {
+            word-wrap: break-word; /* Đảm bảo văn bản bẻ dòng nếu quá dài */
+            margin: 0; /* Loại bỏ khoảng cách mặc định giữa các đoạn văn bản */
+            padding: 0; /* Loại bỏ khoảng cách mặc định */
+        }
+    }
+
+    .wrapper {
+        overflow: hidden;
+        height: 0px;
+        transition: height 0.5s ease-in-out;
+        margin-top: 16px; // khoảng cách giữa phần cố định và phần mở rộng
+    }
+
+    .button {
+        background-color: #1d4ed8;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        &:hover {
+            background-color: #153eac;
+        }
+    }
+    .arrow {
+        font-size: 18px;
+    }
+}
